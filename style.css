@@ -1,0 +1,139 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+
+  --very-dark-blue: 216, 12%, 8%;
+
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(var(--very-dark-blue));
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 0.25rem;
+}
+
+.card-container {
+  background: var(--dark-blue);
+  max-width: 23rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.card-paragraph {
+  margin-bottom: 1.5rem;
+  color: var(--medium-grey);
+  line-height: 1.5;
+}
+
+.list-button {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  color: var(--medium-grey);
+}
+
+.list-button input {
+  display: none;
+}
+
+.card-button-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  padding: 1rem 0 0.8rem;
+  border-radius: 100%;
+  background: hsla(var(--very-dark-blue), 0.5);
+  transition: ease 0.3s;
+}
+
+.card-button-radio:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.list-button input:checked + .card-button-radio {
+  background: var(--medium-grey);
+  color: var(--white);
+}
+
+.card-button-submit {
+  border: none;
+  width: 100%;
+  padding: 0.8rem 0;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 2rem;
+  transition: ease 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+}
+
+.card-button-submit:hover {
+  background: var(--white);
+  color: var(--orange);
+}
+
+.card-image {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background: hsla(var(--very-dark-blue), 0.5);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-image img {
+  width: 50%;
+  height: 50%;
+}
+
+.card-thankyou {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.card-thankyou img {
+  display: block;
+  width: 10rem;
+  margin: 0 auto 1rem;
+}
+
+.card-thankyou .card-rating {
+  background-color: hsla(var(--very-dark-blue), 0.5);
+  margin: 0 3.5rem;
+  padding: 0.5rem 0.5rem 0.3rem;
+  border-radius: 3rem;
+  color: var(--orange);
+}
+
+.card-thankyou .card-title {
+  margin-bottom: -0.5rem;
+}

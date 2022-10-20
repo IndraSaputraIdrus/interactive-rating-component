@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <!-- Rating state start -->
+
+    <div id="card-menu" class="card-container">
+      <div class="card-image">
+        <img src="assets/images/icon-star.svg" alt="star" />
+      </div>
+
+      <h1 class="card-title">How did we do?</h1>
+
+      <p class="card-paragraph">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+
+      <form id="form">
+        <div class="list-button">
+          <div>
+            <input type="radio" name="radio" id="radio1" value="1" />
+            <label class="card-button-radio" for="radio1"> 1 </label>
+          </div>
+
+          <div>
+            <input type="radio" name="radio" id="radio2" value="2" />
+            <label class="card-button-radio" for="radio2"> 2 </label>
+          </div>
+
+          <div>
+            <input type="radio" name="radio" id="radio3" value="3" />
+            <label class="card-button-radio" for="radio3"> 3 </label>
+          </div>
+
+          <div>
+            <input type="radio" name="radio" id="radio4" value="4" />
+            <label class="card-button-radio" for="radio4"> 4 </label>
+          </div>
+
+          <div>
+            <input type="radio" name="radio" id="radio5" value="5" />
+            <label class="card-button-radio" for="radio5"> 5 </label>
+          </div>
+        </div>
+
+        <button class="card-button-submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+
+    <div id="card-success" class="card-container card-thankyou">
+      <img src="./assets/images/illustration-thank-you.svg" alt="thankyou" />
+
+      <div class="card-rating">
+        <p>You selected <span>1</span> out of 5</p>
+      </div>
+      <h1 class="card-title">Thank you!</h1>
+      <p class="card-paragraph">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+
+      <button id="back" class="card-button-submit">Back</button>
+    </div>
+
+    <!-- Thank you state end -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
